@@ -56,7 +56,7 @@ export const EXPERIENCES: Experience[] = [
     company: "PT Telkom Indonesia",
     period: "Oct 2025 - Present",
     location: "Yogyakarta",
-    imageUrl: "/foto/Business Analyst Intern2.jpg",
+    imageUrl: "/foto/Intern Telkom YK.jpg",
     description: [
       "Collect, manage, and validate performance and risk data to ensure high accuracy and reliability.",
       "Analyze churn data and Wilayah Telekomunikasi (Witel) performance metrics in Region 3 to identify patterns, risk factors, and actionable insights.",
@@ -113,10 +113,10 @@ export const PROJECTS: Project[] = [
     id: 1,
     title: "AirWise: Air Quality Prediction",
   //  description: "This project developed a website for predicting air quality, utilizing the Air Pollution Standard Index (ISPU) from DKI Jakarta (January 1, 2021 – July 31, 2024). It applied KNN and SVM algorithms, achieving accuracies of 96% and 97%, respectively. The best-performing model is deployed to help the public understand air quality and take appropriate precautions for outdoor activities.",
-    techStack: ["Python", "Machine Learning", "KNN", "SVM", "Streamlit"],
-    category: "Data Science",
-    imageUrl: "https://picsum.photos/seed/airwise/600/400",
-    link: "#"
+    techStack: ["Python", "Classification", "Machine Learning"],
+    category: "Machine Learning",
+    imageUrl: "/foto/AirWise.png",
+    link: "https://airwise.streamlit.app/"
   },
   {
     id: 2,
@@ -124,62 +124,62 @@ export const PROJECTS: Project[] = [
   //  description: "This project involved the creation of a database for Harmony Heaven Hotel, covering the process from database design to executing queries for various simulations within the company's system. The database was designed to manage data related to reservations, visitors, employees, rooms, and transactions, and it supported efficient decision-making through structured queries.",
     techStack: ["MySQL", "Database Design", "SQL"],
     category: "Database",
-    imageUrl: "https://picsum.photos/seed/hotel/600/400",
-    link: "#"
+    imageUrl: "/foto/Harmony Heaven Hotel Database.png",
+    link: "https://drive.google.com/file/d/1mEcVxMlhctd8zRqvzc8upZcIUPrxz_7m/view"
   },
   {
     id: 3,
-    title: "McDonald's Stock Prediction (LSTM vs GRU)",
+    title: "Perbandingan Kinerja Long Short Term Memory dan Gated Recurrent Unit dalam Prediksi Harga Saham McDonald's",
   //  description: "This project analyzed the effect of a global boycott on McDonald's stock price through time series forecasting using LSTM and GRU models. The models were trained on historical stock data from January 31, 2015 to January 31, 2025, and optimized using Optuna. The untuned LSTM model achieved the lowest error rate, highlighting its effectiveness in capturing market sentiment changes during social movements.",
-    techStack: ["R", "Python", "Deep Learning", "LSTM", "GRU", "Optuna"],
+    techStack: ["Python", "Forecasting", "Deep Learning"],
     category: "Data Science",
-    imageUrl: "https://picsum.photos/seed/stock/600/400",
-    link: "#"
+    imageUrl: "/foto/Perbandingan Kinerja LSTM dan GRU.png",
+    link: "https://drive.google.com/file/d/1Wky-W0hJum_2LtROQ5Y9aaykJMt92q7F/view"
   },
   {
     id: 4,
     title: "ShinyApp: Heart Disease Predictions",
   //  description: "This project developed an interactive website using Shiny to classify heart diseases. The application utilized the Random Forest algorithm and achieved 90% accuracy. The Shiny app is designed to be user-friendly, enabling users to make predictions easily and quickly.",
-    techStack: ["R", "Shiny", "Random Forest", "Machine Learning"],
-    category: "Data Science",
-    imageUrl: "https://picsum.photos/seed/heart/600/400",
-    link: "#"
+    techStack: ["R", "Classification", "Machine Learning"],
+    category: "Machine Learning",
+    imageUrl: "/foto/ShinyApp Heart Disease Predictions.png",
+    link: "https://mr-alfa.shinyapps.io/Heart-Disease-Predictions/"
   },
   {
     id: 5,
     title: "Pemodelan Topik Terkait Pemblokiran Rekening oleh PPATK Menggunakan BERTopic",
   //  description: "This project analyzed public opinion on PPATK's policy of freezing dormant bank accounts using topic modeling (BERTopic) on YouTube comments. It leveraged IndoSBERT embeddings, UMAP, HDBSCAN, and KeyBERTInspired to uncover dominant themes and provide data-driven insights into public perspectives on financial regulations.",
-    techStack: ["Python", "NLP", "BERTopic", "IndoSBERT", "Topic Modeling"],
+    techStack: ["Python", "NLP", "Topic Modeling"],
     category: "Natural Language Processing",
-    imageUrl: "https://picsum.photos/seed/bertopic/600/400",
-    link: "#"
+    imageUrl: "/foto/Pemodelan Topik.png",
+    link: "https://medium.com/@ridhoalfarid95/pemodelan-topik-terkait-pemblokiran-rekening-oleh-ppatk-menggunakan-bertopic-a36b1c3d624c"
   },
   {
     id: 6,
     title: "Sentiment Analysis of Tapera Policy Using IndoBERTweet",
   //  description: "This project aimed to analyze public sentiment towards the Tapera policy using data from social media platform X (Twitter). It used IndoBERTweet as a pre-trained model for fine-tuning, utilizing 4,112 tweets.",
-    techStack: ["Python", "NLP", "IndoBERTweet", "Hugging Face", "Sentiment Analysis"],
+    techStack: ["Python", "NLP", "Sentiment Analysis"],
     category: "Natural Language Processing",
-    imageUrl: "https://picsum.photos/seed/nlp/600/400",
-    link: "#"
+    imageUrl: "/foto/Sentiment Analysis of Tapera Policy Using IndoBERTweet.png",
+    link: "https://medium.com/statistics-uii/sentiment-analysis-of-tapera-policy-using-indobertweet-43c332701efe"
   },
   {
     id: 7,
-    title: "Perbandingan Kinerja ANN dan CNN dalam Klasifikasi Citra Pakaian",
+    title: "Perbandingan Kinerja ANN dan CNN dalam Klasifikasi Citra Pakaian Atas, Pakaian Bawah, dan Alas Kaki",
   //  description: "This project identified three primary fashion categories: upper wear, lower wear, and footwear. Leveraging deep learning, it compared the performance of Artificial Neural Networks (ANN) and Convolutional Neural Networks (CNN) to improve the efficiency, accuracy, and personalization of automated apparel recognition systems.",
-    techStack: ["Python", "Deep Learning", "CNN", "ANN", "Computer Vision"],
+    techStack: ["Python", "Image Classification", "Deep Learning"],
     category: "Computer Vision",
-    imageUrl: "https://picsum.photos/seed/fashion/600/400",
-    link: "#"
+    imageUrl: "/foto/Perbandingan Kinerja ANN dan CNN.png",
+    link: "https://medium.com/@ridhoalfarid95/perbandingan-kinerja-artificial-neural-network-dan-convolutional-neural-network-dalam-klasifikasi-2ce891529155"
   },
   {
     id: 8,
     title: "Face Recognition",
   //  description: "This project developed a real-time face recognition system using OpenCV and LBPH model to identify individuals from a live video stream.",
-    techStack: ["Python", "OpenCV", "Computer Vision", "LBPH"],
+    techStack: ["Python", "OpenCV", "Computer Vision"],
     category: "Computer Vision",
-    imageUrl: "https://picsum.photos/seed/face/600/400",
-    link: "#"
+    imageUrl: "/foto/face_recognition.png",
+    link: "https://github.com/ridhoalfarid/Face-Recognition"
   },
   {
     id: 9,
@@ -187,26 +187,26 @@ export const PROJECTS: Project[] = [
   //  description: "This project presented an infographic that compared the educational quality of Indonesia, Malaysia, and Singapore using the 2022 PISA results as a primary benchmark. It highlighted Singapore's top ranking and examined contributing factors such as student-teacher ratios and school participation rates. Ultimately, it proposed the 'CERDAS' framework as a multi-faceted strategy to enhance Indonesia's educational standards.",
     techStack: ["Tableau", "Data Visualization", "Infographic"],
     category: "Data Visualization",
-    imageUrl: "https://picsum.photos/seed/cerdas/600/400",
-    link: "#"
+    imageUrl: "/foto/CERDAS.jpg",
+    link: "https://drive.google.com/file/d/177mLbe6rL_b892qps6fcpYArs5oMnXNZ/view"
   },
   {
     id: 10,
     title: "Automated Toll Gate Traffic Monitoring",
   //  description: "This project presented an infographic that compared the educational quality of Indonesia, Malaysia, and Singapore using the 2022 PISA results as a primary benchmark. It highlighted Singapore's top ranking and examined contributing factors such as student-teacher ratios and school participation rates. Ultimately, it proposed the 'CERDAS' framework as a multi-faceted strategy to enhance Indonesia's educational standards.",
-    techStack: ["Tableau", "Data Visualization", "Infographic"],
-    category: "Data Visualization",
-    imageUrl: "https://picsum.photos/seed/cerdas/600/400",
-    link: "#"
+    techStack: ["Python", "Background Subtraction", "Computer Vision"],
+    category: "Computer Vision",
+    imageUrl: "/foto/automated_gate.png",
+    link: "https://github.com/ridhoalfarid/Automated-Toll-Gate-Traffic-Monitoring"
   },
   {
     id: 11,
-    title: "Pengelompokkan Tingkat Pengangguran Terbuka di Indonesia Menggunakan DTW-K-Medoids, DTW-Fuzzy CMeans, dan DTW-DBSCAN",
+    title: "Pengelompokkan Tingkat Pengangguran Terbuka di Indonesia Menggunakan DTW-K-Medoids, DTW-Fuzzy-C-Means, dan DTW-DBSCAN",
   //  description: "This project presented an infographic that compared the educational quality of Indonesia, Malaysia, and Singapore using the 2022 PISA results as a primary benchmark. It highlighted Singapore's top ranking and examined contributing factors such as student-teacher ratios and school participation rates. Ultimately, it proposed the 'CERDAS' framework as a multi-faceted strategy to enhance Indonesia's educational standards.",
-    techStack: ["Tableau", "Data Visualization", "Infographic"],
-    category: "Data Visualization",
-    imageUrl: "https://picsum.photos/seed/cerdas/600/400",
-    link: "#"
+    techStack: ["Python", "Clustering", "Machine Learning"],
+    category: "Data Science",
+    imageUrl: "/foto/Pengelompokan Tingkat Pengangguran Terbuka.png",
+    link: "https://drive.google.com/file/d/1-IPOQ-fIwmPvEkSagKNpBev07EupOBrY/view"
   }
 ];
 

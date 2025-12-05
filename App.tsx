@@ -542,7 +542,7 @@ const Footer = () => {
               <a href="https://www.linkedin.com/in/ridhoalfa" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-primary text-slate-900 font-bold rounded-lg hover:bg-emerald-400 transition-colors">
                 Say Hello
               </a>
-              <a href="#" className="px-6 py-3 bg-slate-800 text-white font-medium rounded-lg hover:bg-slate-700 transition-colors border border-slate-700">
+              <a href="https://drive.google.com/drive/folders/16q3iZdy3kad0YyB_hzhKQP9fjrh6L8BJ?usp=drive_link" className="px-6 py-3 bg-slate-800 text-white font-medium rounded-lg hover:bg-slate-700 transition-colors border border-slate-700">
                 Download CV
               </a>
             </div>
