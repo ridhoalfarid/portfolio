@@ -1,5 +1,5 @@
 import React, { useState, useEffect, ReactNode } from 'react';
-import { PROFILE, EXPERIENCES, PROJECTS, SKILLS, SOCIAL_LINKS } from './constants';
+import { PROFILE, EXPERIENCES, PROJECTS, SKILLS, SOCIAL_LINKS, ORGANIZATIONS_VOLUNTEERS, CERTIFICATIONS } from './constants';
 import { Project, Skill } from './types';
 
 // --- Helper Components ---
@@ -25,9 +25,8 @@ const NavLink: React.FC<NavLinkProps> = ({ href, label, active, onClick }) => (
   <a
     href={href}
     onClick={onClick}
-    className={`px-4 py-2 text-sm font-medium transition-colors duration-300 ${
-      active ? 'text-primary' : 'text-slate-400 hover:text-white'
-    }`}
+    className={`px-4 py-2 text-sm font-medium transition-colors duration-300 ${active ? 'text-primary' : 'text-slate-400 hover:text-white'
+      }`}
   >
     {label}
   </a>
@@ -50,14 +49,15 @@ const Navbar = () => {
     { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
     { id: 'projects', label: 'Projects' },
+    { id: 'organizations', label: 'Organizations' },
+    { id: 'certifications', label: 'Certifications' },
     { id: 'contact', label: 'Contact' },
   ];
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-slate-900/90 backdrop-blur-md shadow-lg border-b border-slate-800' : 'bg-transparent py-4'
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-900/90 backdrop-blur-md shadow-lg border-b border-slate-800' : 'bg-transparent py-4'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -66,7 +66,7 @@ const Navbar = () => {
               MRA<span className="text-primary">.</span>
             </span>
           </div>
-          
+
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-4">
             {navItems.map((item) => (
@@ -75,7 +75,7 @@ const Navbar = () => {
                 href={`#${item.id}`}
                 label={item.label}
                 active={false}
-                onClick={() => {}}
+                onClick={() => { }}
               />
             ))}
           </div>
@@ -124,19 +124,19 @@ const Hero = () => {
         <div className="glass-card inline-block px-4 py-1 rounded-full mb-6">
           <span className="text-primary text-sm font-mono font-medium">Welcome To My Portfolio</span>
         </div>
-        
+
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-6">
           <span className="text bg-clip-text bg-gradient-to-r from-white to-slate-400">{PROFILE.name}</span>
         </h1>
-        
+
         <p className="text-lg md:text-2xl text-primary font-medium mb-6 h-8">
           {PROFILE.role}
         </p>
-        
+
         <p className="max-w-4xl mx-auto text-slate-400 text-base md:text-lg mb-10 leading-relaxed">
           {PROFILE.bio}
         </p>
-        
+
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a href="#projects" className="px-8 py-3 bg-primary text-slate-900 font-bold rounded-lg hover:bg-emerald-400 transition-all duration-300 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)]">
             View Projects
@@ -235,12 +235,12 @@ const Experience = () => {
             <div key={exp.id} className="relative pl-8 md:pl-0 group">
               {/* Timeline Line */}
               <div className="hidden md:block absolute left-[50%] top-0 bottom-0 w-px bg-slate-800 -translate-x-1/2 group-last:bottom-auto group-last:h-full"></div>
-              
+
               {/* Mobile Timeline Line */}
               <div className="md:hidden absolute left-2 top-2 bottom-0 w-px bg-slate-800"></div>
 
               <div className={`flex flex-col md:flex-row items-start justify-between ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} w-full`}>
-                
+
                 {/* Dot */}
                 <div className="absolute left-2 md:left-[50%] w-4 h-4 rounded-full bg-primary border-4 border-slate-900 -translate-x-1.5 md:-translate-x-1/2 mt-1.5 z-10 shadow-[0_0_10px_rgba(16,185,129,0.5)]"></div>
 
@@ -249,6 +249,15 @@ const Experience = () => {
 
                 {/* Card */}
                 <div className="w-full md:w-[45%] glass-card p-6 rounded-xl hover:bg-slate-800/80 transition-all duration-300">
+                  {exp.imageUrl && (
+                    <div className="mb-4 rounded-lg overflow-hidden">
+                      <img
+                        src={exp.imageUrl}
+                        alt={exp.company}
+                        className="w-full h-48 object-cover"
+                      />
+                    </div>
+                  )}
                   <div className="flex flex-col mb-4">
                     <h3 className="text-xl font-bold text-white">{exp.role}</h3>
                     <h4 className="text-primary font-medium text-sm">{exp.company}</h4>
@@ -278,16 +287,16 @@ const Experience = () => {
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   const categories = [
-    'All', 
-    'Data Science', 
-    'Database', 
-    'Data Visualization', 
-    'Natural Language Processing', 
+    'All',
+    'Data Science',
+    'Database',
+    'Data Visualization',
+    'Natural Language Processing',
     'Computer Vision'
   ];
 
-  const filteredProjects = activeCategory === 'All' 
-    ? PROJECTS 
+  const filteredProjects = activeCategory === 'All'
+    ? PROJECTS
     : PROJECTS.filter(p => p.category === activeCategory);
 
   return (
@@ -303,11 +312,10 @@ const Projects = () => {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeCategory === cat 
-                  ? 'bg-primary text-slate-900' 
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === cat
+                  ? 'bg-primary text-slate-900'
                   : 'bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white'
-              }`}
+                }`}
             >
               {cat}
             </button>
@@ -320,9 +328,9 @@ const Projects = () => {
             <div key={project.id} className="glass-card rounded-xl overflow-hidden group hover:-translate-y-2 transition-all duration-300 flex flex-col h-full">
               <div className="relative h-48 overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/20 z-10 group-hover:bg-transparent transition-colors"></div>
-                <img 
-                  src={project.imageUrl} 
-                  alt={project.title} 
+                <img
+                  src={project.imageUrl}
+                  alt={project.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-4 right-4 z-20">
@@ -331,18 +339,18 @@ const Projects = () => {
                   </span>
                 </div>
               </div>
-              
+
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-slate-400 text-sm mb-6 flex-1">
+                {/* <p className="text-slate-400 text-sm mb-6 flex-1">
                   {project.description}
-                </p>
-                
+                </p> */}
+
                 <div className="mt-auto">
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.techStack.slice(0,3).map((tech, i) => (
+                    {project.techStack.slice(0, 3).map((tech, i) => (
                       <span key={i} className="text-xs text-slate-500 bg-slate-800 px-2 py-1 rounded border border-slate-700/50">
                         {tech}
                       </span>
@@ -353,13 +361,117 @@ const Projects = () => {
                       </span>
                     )}
                   </div>
-                  
-                  <a href="#" className="inline-flex items-center text-sm text-primary font-semibold hover:underline">
-                    View Details <i className="fa-solid fa-arrow-right ml-2 text-xs"></i>
-                  </a>
+
+                  {project.link && (
+                    <a href={project.link} className="inline-flex items-center text-sm text-primary font-semibold hover:underline">
+                      View Details <i className="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const OrganizationsVolunteers = () => {
+  return (
+    <section id="organizations" className="py-20 bg-slate-900">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionTitle>
+          Organization & Volunteer
+        </SectionTitle>
+
+        <div className="space-y-12">
+          {ORGANIZATIONS_VOLUNTEERS.map((org, index) => (
+            <div key={org.id} className="relative pl-8 md:pl-0 group">
+              {/* Timeline Line */}
+              <div className="hidden md:block absolute left-[50%] top-0 bottom-0 w-px bg-slate-800 -translate-x-1/2 group-last:bottom-auto group-last:h-full"></div>
+
+              {/* Mobile Timeline Line */}
+              <div className="md:hidden absolute left-2 top-2 bottom-0 w-px bg-slate-800"></div>
+
+              <div className={`flex flex-col md:flex-row items-start justify-between ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} w-full`}>
+
+                {/* Dot */}
+                <div className="absolute left-2 md:left-[50%] w-4 h-4 rounded-full bg-primary border-4 border-slate-900 -translate-x-1.5 md:-translate-x-1/2 mt-1.5 z-10 shadow-[0_0_10px_rgba(16,185,129,0.5)]"></div>
+
+                {/* Content Spacer for Desktop */}
+                <div className="hidden md:block w-[45%]"></div>
+
+                {/* Card */}
+                <div className="w-full md:w-[45%] glass-card p-6 rounded-xl hover:bg-slate-800/80 transition-all duration-300">
+                  <div className="flex flex-col mb-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className={`px-2 py-1 text-xs font-bold rounded ${org.type === 'organization'
+                          ? 'bg-blue-600/20 text-blue-400 border border-blue-600/30'
+                          : 'bg-purple-600/20 text-purple-400 border border-purple-600/30'
+                        }`}>
+                        {org.type === 'organization' ? 'Organization' : 'Volunteer'}
+                      </span>
+                    </div>
+                    {org.imageUrl && (
+                      <div className="mb-4 rounded-lg overflow-hidden">
+                        <img
+                          src={org.imageUrl}
+                          className="w-full h-48 object-cover"
+                        />
+                      </div>
+                    )}
+                    <h3 className="text-xl font-bold text-white">{org.organization}</h3>
+                    <h4 className="text-primary font-medium text-sm">{org.role}</h4>
+                    <div className="flex items-center gap-4 mt-2 text-xs text-slate-500 font-mono">
+                      <span><i className="fa-regular fa-calendar mr-1"></i> {org.period}</span>
+                      <span><i className="fa-solid fa-location-dot mr-1"></i> {org.location}</span>
+                    </div>
+                  </div>
+                  <ul className="space-y-2">
+                    {org.description.map((desc, i) => (
+                      <li key={i} className="text-slate-400 text-sm flex items-start">
+                        <span className="text-primary mr-2 mt-1.5 text-[8px]">•</span>
+                        <span>{desc}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Certifications = () => {
+  return (
+    <section id="certifications" className="py-20 bg-slate-900 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionTitle>
+          Certifications
+        </SectionTitle>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {CERTIFICATIONS.map((cert) => (
+            <a key={cert.id} href={cert.link} className="glass-card p-6 rounded-xl hover:bg-slate-800/80 transition-all duration-300 group">
+              <div className="flex items-start justify-between mb-4">
+                {/* <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                  <i className="fa-solid fa-certificate text-primary text-xl"></i>
+                </div> */}
+                <span className="text-xs text-slate-500 font-mono bg-slate-800 px-2 py-1 rounded">
+                  {cert.year}
+                </span>
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                {cert.title}
+              </h3>
+              <p className="text-slate-400 text-sm">
+                {cert.issuer}
+              </p>
+            </a>
           ))}
         </div>
       </div>
@@ -372,58 +484,58 @@ const Footer = () => {
     <footer id="contact" className="bg-slate-950 pt-20 pb-10 border-t border-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-          
+
           {/* Left Column: Contact Details (Swapped) */}
           <div className="flex flex-col justify-center space-y-6">
-             <div className="group flex items-center gap-4 hover:text-white transition-colors">
-                <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-primary group-hover:bg-slate-700 transition-colors shrink-0">
-                   <i className="fa-solid fa-envelope text-xl"></i>
-                </div>
-                <div>
-                   <span className="text-slate-500 text-sm block">Email</span>
-                   <a href={`mailto:${PROFILE.email}`} className="text-lg font-medium">{PROFILE.email}</a>
-                </div>
-             </div>
+            <div className="group flex items-center gap-4 hover:text-white transition-colors">
+              <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-primary group-hover:bg-slate-700 transition-colors shrink-0">
+                <i className="fa-solid fa-envelope text-xl"></i>
+              </div>
+              <div>
+                <span className="text-slate-500 text-sm block">Email</span>
+                <a href={`mailto:${PROFILE.email}`} className="text-lg font-medium">{PROFILE.email}</a>
+              </div>
+            </div>
 
-             <div className="group flex items-center gap-4 hover:text-white transition-colors">
-                <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-primary group-hover:bg-slate-700 transition-colors shrink-0">
-                   <i className="fa-brands fa-linkedin text-xl"></i>
-                </div>
-                <div>
-                   <span className="text-slate-500 text-sm block">LinkedIn</span>
-                   <a href="https://www.linkedin.com/in/ridhoalfa" target="_blank" rel="noopener noreferrer" className="text-lg font-medium">Muhammad Ridho Alfarid</a>
-                   <span className="text-xs text-slate-500 block"></span>
-                </div>
-             </div>
+            <div className="group flex items-center gap-4 hover:text-white transition-colors">
+              <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-primary group-hover:bg-slate-700 transition-colors shrink-0">
+                <i className="fa-brands fa-linkedin text-xl"></i>
+              </div>
+              <div>
+                <span className="text-slate-500 text-sm block">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/ridhoalfa" target="_blank" rel="noopener noreferrer" className="text-lg font-medium">Muhammad Ridho Alfarid</a>
+                <span className="text-xs text-slate-500 block"></span>
+              </div>
+            </div>
 
-             <div className="group flex items-center gap-4 hover:text-white transition-colors">
-                <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-primary group-hover:bg-slate-700 transition-colors shrink-0">
-                   <i className="fa-brands fa-github text-xl"></i>
-                </div>
-                <div>
-                   <span className="text-slate-500 text-sm block">GitHub</span>
-                   <a href="https://github.com/ridhoalfarid" target="_blank" rel="noopener noreferrer" className="text-lg font-medium">ridhoalfarid</a>
-                   <span className="text-xs text-slate-500 block"></span>
-                </div>
-             </div>
+            <div className="group flex items-center gap-4 hover:text-white transition-colors">
+              <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-primary group-hover:bg-slate-700 transition-colors shrink-0">
+                <i className="fa-brands fa-github text-xl"></i>
+              </div>
+              <div>
+                <span className="text-slate-500 text-sm block">GitHub</span>
+                <a href="https://github.com/ridhoalfarid" target="_blank" rel="noopener noreferrer" className="text-lg font-medium">ridhoalfarid</a>
+                <span className="text-xs text-slate-500 block"></span>
+              </div>
+            </div>
 
-             <div className="group flex items-center gap-4 hover:text-white transition-colors">
-                <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-primary group-hover:bg-slate-700 transition-colors shrink-0">
-                   <i className="fa-brands fa-medium text-xl"></i>
-                </div>
-                <div>
-                   <span className="text-slate-500 text-sm block">Medium</span>
-                   <a href="https://medium.com/@ridhoalfarid95" target="_blank" rel="noopener noreferrer" className="text-lg font-medium">Muhammad Ridho Alfarid</a>
-                   <span className="text-xs text-slate-500 block"></span>
-                </div>
-             </div>
+            <div className="group flex items-center gap-4 hover:text-white transition-colors">
+              <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-primary group-hover:bg-slate-700 transition-colors shrink-0">
+                <i className="fa-brands fa-medium text-xl"></i>
+              </div>
+              <div>
+                <span className="text-slate-500 text-sm block">Medium</span>
+                <a href="https://medium.com/@ridhoalfarid95" target="_blank" rel="noopener noreferrer" className="text-lg font-medium">Muhammad Ridho Alfarid</a>
+                <span className="text-xs text-slate-500 block"></span>
+              </div>
+            </div>
           </div>
 
           {/* Right Column: CTA (Swapped) */}
           <div className="flex flex-col md:items-start md:text-right">
             <h2 className="text-3xl font-bold text-white mb-6">Let's Work Together</h2>
             <p className="text-slate-400 mb-8 max-w-md md:text-left">
-              I am open to internship and full-time opportunities in Business Intelligence, Data Science, Machine Learning, and related fields. 
+              I am open to internship and full-time opportunities in Business Intelligence, Data Science, Machine Learning, and related fields.
               Feel free to reach out for collaborations or just a friendly chat.
             </p>
             <div className="flex flex-wrap gap-4 md:justify-end">
@@ -435,7 +547,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          
+
         </div>
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
@@ -463,6 +575,8 @@ const App = () => {
       <Skills />
       <Experience />
       <Projects />
+      <OrganizationsVolunteers />
+      <Certifications />
       <Footer />
     </div>
   );
