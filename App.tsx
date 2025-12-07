@@ -10,7 +10,7 @@ const SectionTitle = ({ children, subtitle }: { children?: ReactNode; subtitle?:
       {children}
       <span className="absolute -bottom-2 left-0 w-full h-1 bg-primary rounded-full opacity-80"></span>
     </h2>
-    {subtitle && <p className="text-slate-400 mt-4 max-w-2xl mx-auto">{subtitle}</p>}
+    {subtitle && <p className="text-slate-200 mt-4 max-w-2xl mx-auto">{subtitle}</p>}
   </div>
 );
 
@@ -25,7 +25,7 @@ const NavLink: React.FC<NavLinkProps> = ({ href, label, active, onClick }) => (
   <a
     href={href}
     onClick={onClick}
-    className={`px-4 py-2 text-sm font-medium transition-colors duration-300 ${active ? 'text-primary' : 'text-slate-400 hover:text-white'
+    className={`px-4 py-2 text-sm font-medium transition-colors duration-300 ${active ? 'text-primary' : 'text-slate-200 hover:text-white'
       }`}
   >
     {label}
@@ -133,7 +133,7 @@ const Hero = () => {
           {PROFILE.role}
         </p>
 
-        <p className="max-w-4xl mx-auto text-slate-400 text-base md:text-lg mb-10 leading-relaxed">
+        <p className="max-w-4xl mx-auto text-slate-00 text-base md:text-lg mb-10 leading-relaxed">
           {PROFILE.bio}
         </p>
 
@@ -146,7 +146,7 @@ const Hero = () => {
           </a>
         </div>
 
-        <div className="mt-16 flex justify-center gap-8 text-slate-500">
+        <div className="mt-16 flex justify-center gap-8 text-slate-350">
           <div className="text-center">
             <div className="text-2xl font-bold text-white">10+</div>
             <div className="text-xs uppercase tracking-wide mt-1">Projects</div>
@@ -181,16 +181,16 @@ const Skills = () => {
             </h3>
             <div className="border-l-2 border-slate-700 pl-4 py-1">
               <h4 className="text-lg font-semibold text-white">{PROFILE.education.university}</h4>
-              <p className="text-slate-400 text-sm mb-2">{PROFILE.education.degree}</p>
+              <p className="text-slate-200 text-sm mb-2">{PROFILE.education.degree}</p>
               <div className="flex justify-between items-center mt-2">
                 <span className="bg-slate-800 px-3 py-1 rounded text-xs text-primary font-mono">{PROFILE.education.period}</span>
-                <span className="text-white font-bold text-sm">CGPA: {PROFILE.education.cgpa}</span>
+                <span className="text-white font-bold text-sm">GPA: {PROFILE.education.gpa}</span>
               </div>
             </div>
             <div className="mt-6">
               <ul className="space-y-3">
                 {PROFILE.education.highlights.map((item, index) => (
-                  <li key={index} className="flex items-start text-slate-400 text-sm leading-relaxed">
+                  <li key={index} className="flex items-start text-slate-200 text-sm leading-relaxed">
                     <span className="text-primary mr-2 mt-1 flex-shrink-0">•</span>
                     <span>{item}</span>
                   </li>
@@ -261,14 +261,14 @@ const Experience = () => {
                   <div className="flex flex-col mb-4">
                     <h3 className="text-xl font-bold text-white">{exp.role}</h3>
                     <h4 className="text-primary font-medium text-sm">{exp.company}</h4>
-                    <div className="flex items-center gap-4 mt-2 text-xs text-slate-500 font-mono">
+                    <div className="flex items-center gap-4 mt-2 text-xs text-slate-350 font-mono">
                       <span><i className="fa-regular fa-calendar mr-1"></i> {exp.period}</span>
                       <span><i className="fa-solid fa-location-dot mr-1"></i> {exp.location}</span>
                     </div>
                   </div>
                   <ul className="space-y-2">
                     {exp.description.map((desc, i) => (
-                      <li key={i} className="text-slate-400 text-sm flex items-start">
+                      <li key={i} className="text-slate-200 text-sm flex items-start">
                         <span className="text-primary mr-2 mt-1.5 text-[8px]">•</span>
                         <span>{desc}</span>
                       </li>
@@ -314,7 +314,7 @@ const Projects = () => {
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === cat
                   ? 'bg-primary text-slate-900'
-                  : 'bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white'
+                  : 'bg-slate-800 text-slate-200 hover:bg-slate-700 hover:text-white'
                 }`}
             >
               {cat}
@@ -344,19 +344,19 @@ const Projects = () => {
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
-                {/* <p className="text-slate-400 text-sm mb-6 flex-1">
+                {/* <p className="text-slate-200 text-sm mb-6 flex-1">
                   {project.description}
                 </p> */}
 
                 <div className="mt-auto">
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.techStack.slice(0, 3).map((tech, i) => (
-                      <span key={i} className="text-xs text-slate-500 bg-slate-800 px-2 py-1 rounded border border-slate-700/50">
+                      <span key={i} className="text-xs text-slate-350 bg-slate-800 px-2 py-1 rounded border border-slate-700/50">
                         {tech}
                       </span>
                     ))}
                     {project.techStack.length > 3 && (
-                      <span className="text-xs text-slate-500 bg-slate-800 px-2 py-1 rounded border border-slate-700/50">
+                      <span className="text-xs text-slate-350 bg-slate-800 px-2 py-1 rounded border border-slate-700/50">
                         +{project.techStack.length - 3}
                       </span>
                     )}
@@ -423,14 +423,14 @@ const OrganizationsVolunteers = () => {
                     )}
                     <h3 className="text-xl font-bold text-white">{org.organization}</h3>
                     <h4 className="text-primary font-medium text-sm">{org.role}</h4>
-                    <div className="flex items-center gap-4 mt-2 text-xs text-slate-500 font-mono">
+                    <div className="flex items-center gap-4 mt-2 text-xs text-slate-350 font-mono">
                       <span><i className="fa-regular fa-calendar mr-1"></i> {org.period}</span>
                       <span><i className="fa-solid fa-location-dot mr-1"></i> {org.location}</span>
                     </div>
                   </div>
                   <ul className="space-y-2">
                     {org.description.map((desc, i) => (
-                      <li key={i} className="text-slate-400 text-sm flex items-start">
+                      <li key={i} className="text-slate-200 text-sm flex items-start">
                         <span className="text-primary mr-2 mt-1.5 text-[8px]">•</span>
                         <span>{desc}</span>
                       </li>
@@ -461,14 +461,14 @@ const Certifications = () => {
                 {/* <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
                   <i className="fa-solid fa-certificate text-primary text-xl"></i>
                 </div> */}
-                <span className="text-xs text-slate-500 font-mono bg-slate-800 px-2 py-1 rounded">
+                <span className="text-xs text-slate-350 font-mono bg-slate-800 px-2 py-1 rounded">
                   {cert.year}
                 </span>
               </div>
               <h3 className="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">
                 {cert.title}
               </h3>
-              <p className="text-slate-400 text-sm">
+              <p className="text-slate-200 text-sm">
                 {cert.issuer}
               </p>
             </a>
@@ -492,7 +492,7 @@ const Footer = () => {
                 <i className="fa-solid fa-envelope text-xl"></i>
               </div>
               <div>
-                <span className="text-slate-500 text-sm block">Email</span>
+                <span className="text-slate-350 text-sm block">Email</span>
                 <a href={`mailto:${PROFILE.email}`} className="text-lg font-medium">{PROFILE.email}</a>
               </div>
             </div>
@@ -502,9 +502,9 @@ const Footer = () => {
                 <i className="fa-brands fa-linkedin text-xl"></i>
               </div>
               <div>
-                <span className="text-slate-500 text-sm block">LinkedIn</span>
+                <span className="text-slate-350 text-sm block">LinkedIn</span>
                 <a href="https://www.linkedin.com/in/ridhoalfa" target="_blank" rel="noopener noreferrer" className="text-lg font-medium">Muhammad Ridho Alfarid</a>
-                <span className="text-xs text-slate-500 block"></span>
+                <span className="text-xs text-slate-350 block"></span>
               </div>
             </div>
 
@@ -513,9 +513,9 @@ const Footer = () => {
                 <i className="fa-brands fa-github text-xl"></i>
               </div>
               <div>
-                <span className="text-slate-500 text-sm block">GitHub</span>
+                <span className="text-slate-350 text-sm block">GitHub</span>
                 <a href="https://github.com/ridhoalfarid" target="_blank" rel="noopener noreferrer" className="text-lg font-medium">ridhoalfarid</a>
-                <span className="text-xs text-slate-500 block"></span>
+                <span className="text-xs text-slate-350 block"></span>
               </div>
             </div>
 
@@ -524,9 +524,9 @@ const Footer = () => {
                 <i className="fa-brands fa-medium text-xl"></i>
               </div>
               <div>
-                <span className="text-slate-500 text-sm block">Medium</span>
+                <span className="text-slate-350 text-sm block">Medium</span>
                 <a href="https://medium.com/@ridhoalfarid95" target="_blank" rel="noopener noreferrer" className="text-lg font-medium">Muhammad Ridho Alfarid</a>
-                <span className="text-xs text-slate-500 block"></span>
+                <span className="text-xs text-slate-350 block"></span>
               </div>
             </div>
           </div>
@@ -534,7 +534,7 @@ const Footer = () => {
           {/* Right Column: CTA (Swapped) */}
           <div className="flex flex-col md:items-start md:text-right">
             <h2 className="text-3xl font-bold text-white mb-6">Let's Work Together</h2>
-            <p className="text-slate-400 mb-8 max-w-md md:text-left">
+            <p className="text-slate-200 mb-8 max-w-md md:text-left">
               I am open to internship and full-time opportunities in Business Intelligence, Data Science, Machine Learning, and related fields.
               Feel free to reach out for collaborations or just a friendly chat.
             </p>
@@ -551,12 +551,12 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-slate-500 text-sm mb-4 md:mb-0">
+          <p className="text-slate-350 text-sm mb-4 md:mb-0">
             &copy; {new Date().getFullYear()} Muhammad Ridho Alfarid. All rights reserved.
           </p>
           <div className="flex space-x-6">
             {SOCIAL_LINKS.map((link, i) => (
-              <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-colors text-xl">
+              <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="text-slate-200 hover:text-primary transition-colors text-xl">
                 <i className={link.icon}></i>
               </a>
             ))}

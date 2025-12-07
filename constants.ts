@@ -10,7 +10,7 @@ export const PROFILE = {
     university: "Universitas Islam Indonesia",
     degree: "Bachelor of Statistics",
     period: "2022 - Present (Expected 2026)",
-    cgpa: "3.79 / 4.00",
+    gpa: "3.79 / 4.00",
     highlights: [
       "Top 3 PKM-GFT of PKM Idea Challenge 2024 by Direktorat Pembinaan Kemahasiswaan UII",
       "Undergraduate Thesis: Implementation of BERTopic on User Reviews of the Access by KAI Application on the Google Play Store",
@@ -72,9 +72,9 @@ export const EXPERIENCES: Experience[] = [
     location: "Sleman",
     imageUrl: "/foto/Practicum Assistant.jpg",
     description: [
-      "Taught Statistical Computing (Mar 2025 – Aug 2025)",
-      "Taught Programming Algorithms (Sep 2024 – Jan 2025)",
-      "Taught Database (Mar 2024 – Jul 2024)",
+      "Taught Statistical Computing (Mar 2025 – Aug 2025).",
+      "Taught Programming Algorithms (Sep 2024 – Jan 2025).",
+      "Taught Database (Mar 2024 – Jul 2024).",
       "Designed quizzes and practicum assignments to evaluate student performance.",
       "Assessed students' work through quizzes and practicum reports, and submitted the results to the lecturer."
     ]
