@@ -2,8 +2,8 @@ import { Experience, Project, Skill, SocialLink, OrganizationVolunteer, Certific
 
 export const PROFILE = {
   name: "Muhammad Ridho Alfarid",
-  role: "Statistics Student | Data Science & Machine Learning Enthusiast",
-  bio: "I am an active 7th-semester Statistics student at Universitas Islam Indonesia, committed to applying statistical knowledge and programming skills in real-world contexts. I have been actively involved in volunteer activities, student staff positions, and serving as a practicum assistant, which have helped me develop strong communication, time management, and collaboration skills. I have a keen interest in Business Intelligence, Data Science, and Machine Learning.",
+  role: "Statistics Student | Data Enthusiast",
+  bio: "I am a 7th-semester Statistics student at Universitas Islam Indonesia with a strong interest in Artificial Intelligence, Business Intelligence, and Data Science. I have gained practical experience through internships, teaching assistantships, and volunteer activities. These positions have strengthened my professional skills and technical abilities to solve real-world problems.",
   email: "ridhoalfarid95@gmail.com",
   location: "Daerah Istimewa Yogyakarta, Indonesia",
   education: {
@@ -12,9 +12,9 @@ export const PROFILE = {
     period: "2022 - Present (Expected 2026)",
     gpa: "3.79 / 4.00",
     highlights: [
-      "Top 3 PKM-GFT of PKM Idea Challenge 2024 by Direktorat Pembinaan Kemahasiswaan UII",
-      "Undergraduate Thesis: Implementation of BERTopic on User Reviews of the Access by KAI Application on the Google Play Store",
-      "Relevant Coursework: Database, Data Engineering, Financial Analysis, Business Intelligence, Machine Learning, and Spatial Analysis"
+      "Top 3 PKM-GFT of PKM Idea Challenge 2024 by Direktorat Pembinaan Kemahasiswaan UII.",
+      "Undergraduate Thesis: Implementation of BERTopic on User Reviews of the Access by KAI Application on the Google Play Store.",
+      "Relevant Coursework: Business Intelligence, Database, Data Engineering, Financial Analysis, Machine Learning, and Time Series Analysis."
     ]
   }
 };
@@ -72,11 +72,11 @@ export const EXPERIENCES: Experience[] = [
     location: "Sleman",
     imageUrl: "/foto/Practicum Assistant.jpg",
     description: [
-      "Taught Statistical Computing (Mar 2025 – Aug 2025).",
-      "Taught Programming Algorithms (Sep 2024 – Jan 2025).",
-      "Taught Database (Mar 2024 – Jul 2024).",
-      "Designed quizzes and practicum assignments to evaluate student performance.",
-      "Assessed students' work through quizzes and practicum reports, and submitted the results to the lecturer."
+      "Statistical Computing (Mar 2025 – Aug 2025).",
+      "Programming Algorithms (Sep 2024 – Jan 2025).",
+      "Database (Mar 2024 – Jul 2024).",
+      "Developed quizzes, assignments, and tutorial materials to support student learning.",
+      "Evaluated student performance through quizzes and practicum reports."
     ]
   },
   {
@@ -89,7 +89,7 @@ export const EXPERIENCES: Experience[] = [
     description: [
       "Performed accurate data entry and verification to support the regional publication process.",
       "Conducted exploratory data analysis on public transportation datasets in Jakarta to analyze passenger volume and seasonal fluctuations.",
-      "Organized and managed internal documents to streamline reporting workflows."
+      "Managed and organized internal documents to support reporting workflows"
     ]
   },
   {
@@ -100,10 +100,9 @@ export const EXPERIENCES: Experience[] = [
     location: "Sleman",
     imageUrl: "/foto/Research and Administration.jpg",
     description: [
-      "Managed all PKM administrative requirements at Universitas Islam Indonesia.",
-      "Compiled databases for each faculty to monitor the number of proposals submitted, proposals funded, and participants who qualified for PIMNAS.",
-      "Developed internal selection assessment forms and PKM proposal templates at Universitas Islam Indonesia.",
-      "Searched for references and information related to the implementation of PKM."
+      "Managed PKM administrative tasks and monitored proposal submissions across faculties.",
+      "Built and maintained databases to track performance indicators.",
+      "Created assessment forms and proposal templates for internal UII selection."
     ]
   }
 ];
@@ -234,9 +233,9 @@ export const ORGANIZATIONS_VOLUNTEERS: OrganizationVolunteer[] = [
     type: "volunteer",
     imageUrl: "/foto/Enthusiastic Competition 2023.jpg",
     description: [
-      "Provided, prepared, and managed all necessary facilities during Enthusiastic Competition 2023.",
-      "Collaborated with other divisions to fulfill the equipment and facilities needs for Enthusiastic Competition 2023.",
-      "Created Memorandum of Understanding (MoU) with vendors related to equipment for Enthusiastic Competition 2023."
+      "Provided, prepared, and managed all required facilities during the event.",
+      "Collaborated with other divisions to fulfill equipment and facility needs.",
+      "Created Memorandums of Understanding (MoU) with vendors regarding equipment procurement."
     ]
   },
   {
@@ -248,23 +247,22 @@ export const ORGANIZATIONS_VOLUNTEERS: OrganizationVolunteer[] = [
     type: "volunteer",
     imageUrl: "/foto/Masa Ta'aruf FMIPA 2023.jpg",
     description: [
-      "Was responsible for providing, maintaining, and returning all necessary facilities during Masa Ta'aruf (MASTA) 2023.",
-      "Created Memorandum of Understanding (MoU) with vendors related to equipment for Masa Ta'aruf (MASTA) 2023.",
-      "Coordinated with other divisions to fulfill the facilities and equipment needs for Masa Ta'aruf (MASTA) 2023."
+      "Provided, maintained, and returned all required facilities during the event.",
+      "Coordinated with other divisions to ensure operational readiness.",
+      "Created Memorandum of Understanding (MoU) with vendors for equipment needs."
     ]
   },
   {
     id: 4,
     organization: "I-Birthy 2022",
     role: "Public Relations and Transportation Staff",
-    period: "Oct 2022 – Dec 2023",
+    period: "Oct 2022 – Dec 2022",
     location: "Sleman",
     type: "volunteer",
     imageUrl: "/foto/I-Birthy 2022.jpg",
     description: [
-      "Ensured smooth coordination between the I-Birthy staff, sponsors, guests, and participants to facilitate seamless information flow.",
-      "Designed and managed transportation to ensure smooth and timely mobilization of participants, guests, and committee members for I-Birthy events.",
-      "Handled inquiries and complaints from participants regarding the I-Birthy 2022 event."
+      "Facilitated seamless coordination between event staff, sponsors, guests, and participants to ensure effective communication.",
+      "Managed transportation and logistics to support timely mobilization for event activities."
     ]
   }
 ];
