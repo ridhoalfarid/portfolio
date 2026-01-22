@@ -54,14 +54,14 @@ export const EXPERIENCES: Experience[] = [
     id: 1,
     role: "Business Analyst Intern",
     company: "PT Telkom Indonesia",
-    period: "Oct 2025 - Present",
+    period: "Oct 2025 - Jan 2026",
     location: "Yogyakarta",
     imageUrl: "/foto/Intern Telkom YK.jpg",
     description: [
-      "Collect, manage, and validate performance and risk data to ensure high accuracy and reliability.",
-      "Analyze churn data and Wilayah Telekomunikasi (Witel) performance metrics in Region 3 to identify patterns, risk factors, and actionable insights.",
-      "Design and build interactive dashboards in Looker Studio to visualize churn trends and customer behavior in Region 3 to support strategic decision making.",
-      "Contribute to the development of the 2026 business plan for Witel Yogyakarta Jateng Selatan by providing performance assessments and supporting documentation."
+      "Collected, managed, and validated performance and risk data to ensure accuracy and reliability.",
+      "Analyzed churn data and regional performance metrics in Region 3 to identify patterns, risk factors, and actionable insights.",
+      "Designed and developed interactive dashboards in Looker Studio to visualize churn trends and customer behavior in Region 3, supporting strategic decision making.",
+      "Contributed to the development of the 2026 business plan for Witel Yogyakarta Jateng Selatan by providing performance assessments and supporting documentation."
     ]
   },
   {
