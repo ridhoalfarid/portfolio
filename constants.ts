@@ -3,7 +3,7 @@ import { Experience, Project, Skill, SocialLink, OrganizationVolunteer, Certific
 export const PROFILE = {
   name: "Muhammad Ridho Alfarid",
   role: "Statistics Student | Data Enthusiast",
-  bio: "I am a 7th-semester Statistics student at Universitas Islam Indonesia with a strong interest in Artificial Intelligence, Business Intelligence, and Data Science. I have gained practical experience through internships, teaching assistantships, and volunteer activities. These positions have strengthened my professional skills and technical abilities to solve real-world problems.",
+  bio: "I am a 8th-semester Statistics student at Universitas Islam Indonesia with a strong interest in Artificial Intelligence, Business Intelligence, and Data Science. I have gained practical experience through internships, teaching assistantships, and volunteer activities. These positions have strengthened my professional skills and technical abilities to solve real-world problems.",
   email: "ridhoalfarid95@gmail.com",
   location: "Daerah Istimewa Yogyakarta, Indonesia",
   education: {
