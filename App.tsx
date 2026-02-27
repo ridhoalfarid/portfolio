@@ -291,6 +291,7 @@ const Projects = () => {
     'Data Science',
     'Database',
     'Data Visualization',
+    'Machine Learning',
     'Natural Language Processing',
     'Computer Vision'
   ];

@@ -241,7 +241,7 @@ export const ORGANIZATIONS_VOLUNTEERS: OrganizationVolunteer[] = [
   {
     id: 3,
     organization: "Masa Ta'aruf FMIPA 2023",
-    role: "Expert Equipment Staff",
+    role: "Deputy Equipment Coordinator",
     period: "Jul 2023 – Sep 2023",
     location: "Sleman",
     type: "volunteer",
