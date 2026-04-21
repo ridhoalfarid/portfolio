@@ -66,7 +66,7 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     id: 2,
-    role: "Practicum Assistant",
+    role: "Teaching Assistant",
     company: "Universitas Islam Indonesia",
     period: "Mar 2024 - Aug 2025",
     location: "Sleman",
