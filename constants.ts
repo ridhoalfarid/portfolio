@@ -9,8 +9,8 @@ export const PROFILE = {
   education: {
     university: "Universitas Islam Indonesia",
     degree: "Bachelor of Statistics",
-    period: "2022 - Present (Expected 2026)",
-    gpa: "3.79 / 4.00",
+    period: "Sep 2022 - May 2026",
+    gpa: "3.80 / 4.00",
     highlights: [
       "Top 3 PKM-GFT of PKM Idea Challenge 2024 by Direktorat Pembinaan Kemahasiswaan UII.",
       "Undergraduate Thesis: Implementation of BERTopic on User Reviews of the Access by KAI Application on the Google Play Store.",
@@ -128,12 +128,12 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 3,
-    title: "Perbandingan Kinerja Long Short Term Memory dan Gated Recurrent Unit dalam Prediksi Harga Saham McDonald's",
+    title: "Prediksi Harga Saham McDonald’s Corporation di Tengah Krisis Sentimen Global",
   //  description: "This project analyzed the effect of a global boycott on McDonald's stock price through time series forecasting using LSTM and GRU models. The models were trained on historical stock data from January 31, 2015 to January 31, 2025, and optimized using Optuna. The untuned LSTM model achieved the lowest error rate, highlighting its effectiveness in capturing market sentiment changes during social movements.",
     techStack: ["Python", "Forecasting", "Deep Learning"],
     category: "Data Science",
     imageUrl: "/foto/Perbandingan Kinerja LSTM dan GRU.png",
-    link: "https://drive.google.com/file/d/1Wky-W0hJum_2LtROQ5Y9aaykJMt92q7F/view"
+    link: "https://drive.google.com/file/d/1Hu2-H4EKpdiJj6YH_xjDOWjhPa3vN3n0/view?usp=sharing"
   },
   {
     id: 4,
