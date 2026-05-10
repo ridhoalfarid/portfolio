@@ -9,7 +9,7 @@ export const PROFILE = {
   education: {
     university: "Universitas Islam Indonesia",
     degree: "Bachelor of Statistics",
-    period: "Sep 2022 - May 2026",
+    period: "Sep 2022 - Apr 2026",
     gpa: "3.80 / 4.00",
     highlights: [
       "Top 3 PKM-GFT of PKM Idea Challenge 2024 by Direktorat Pembinaan Kemahasiswaan UII.",
