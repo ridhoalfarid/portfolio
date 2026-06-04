@@ -32,6 +32,9 @@
         width: 8px;
       }
       ::-webkit-scrollbar-track {
+        background: #f8fafc;
+      }
+      .dark ::-webkit-scrollbar-track {
         background: #0f172a;
       }
       ::-webkit-scrollbar-thumb {
@@ -42,10 +45,14 @@
         background: #10b981;
       }
       .glass-card {
-        background: rgba(30, 41, 59, 0.7);
+        background: rgba(255, 255, 255, 0.78);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(15, 23, 42, 0.08);
+      }
+      .dark .glass-card {
+        background: rgba(30, 41, 59, 0.7);
+        border-color: rgba(255, 255, 255, 0.1);
       }
     </style>
   <script type="importmap">
@@ -57,9 +64,8 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-dark text-slate-300 antialiased selection:bg-primary selection:text-white">
+  <body class="bg-slate-50 text-slate-700 antialiased selection:bg-primary selection:text-white dark:bg-dark dark:text-slate-300">
     <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>

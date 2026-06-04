@@ -206,6 +206,15 @@ export const PROJECTS: Project[] = [
     category: "Data Science",
     imageUrl: "/foto/Pengelompokan Tingkat Pengangguran Terbuka.png",
     link: "https://drive.google.com/file/d/1-IPOQ-fIwmPvEkSagKNpBev07EupOBrY/view"
+  },
+  {
+    id: 12,
+    title: "Fore Coffee Sales Performance Analysis",
+  //  description: "This project presented an infographic that compared the educational quality of Indonesia, Malaysia, and Singapore using the 2022 PISA results as a primary benchmark. It highlighted Singapore's top ranking and examined contributing factors such as student-teacher ratios and school participation rates. Ultimately, it proposed the 'CERDAS' framework as a multi-faceted strategy to enhance Indonesia's educational standards.",
+    techStack: ["Python", "BigQuery", "Data Visualization"],
+    category: "Data Science",
+    imageUrl: "/foto/Fore Coffee Sales Performance Analysis.png",
+    link: "https://drive.google.com/file/d/11YL63ZJbrEz9gssiPPGl4uqMeHjD9Mxx/view"
   }
 ];
 
