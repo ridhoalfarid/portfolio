@@ -144,7 +144,7 @@ const Hero = () => {
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-950 dark:text-white tracking-tight mb-6">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-slate-950 to-slate-600 dark:from-white dark:to-slate-400">{PROFILE.name}</span>
+            {PROFILE.name}
           </h1>
 
           <p className="text-lg md:text-2xl text-primary font-medium mb-6">
@@ -394,7 +394,7 @@ const Projects = () => {
                   </div>
 
                   {project.link && (
-                    <a href={project.link} className="inline-flex items-center text-sm text-primary font-semibold hover:underline">
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm text-primary font-semibold hover:underline">
                       View Details <i className="fa-solid fa-arrow-right ml-2 text-xs"></i>
                     </a>
                   )}
@@ -487,7 +487,7 @@ const Certifications = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {CERTIFICATIONS.map((cert) => (
-            <a key={cert.id} href={cert.link} className="glass-card p-6 rounded-xl shadow-sm hover:bg-white transition-all duration-300 group dark:shadow-none dark:hover:bg-slate-800/80">
+            <a key={cert.id} href={cert.link} target="_blank" rel="noopener noreferrer" className="glass-card p-6 rounded-xl shadow-sm hover:bg-white transition-all duration-300 group dark:shadow-none dark:hover:bg-slate-800/80">
               <div className="flex items-start justify-between mb-4">
                 {/* <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
                   <i className="fa-solid fa-certificate text-primary text-xl"></i>
@@ -573,7 +573,7 @@ const Footer = () => {
               <a href="https://www.linkedin.com/in/ridhoalfa" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-primary text-slate-900 font-bold rounded-lg hover:bg-emerald-400 transition-colors">
                 Say Hello
               </a>
-              <a href="https://drive.google.com/drive/folders/16q3iZdy3kad0YyB_hzhKQP9fjrh6L8BJ?usp=drive_link" className="px-6 py-3 bg-white text-slate-900 font-medium rounded-lg hover:bg-slate-50 transition-colors border border-slate-300 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700 dark:border-slate-700">
+              <a href="https://drive.google.com/drive/folders/16q3iZdy3kad0YyB_hzhKQP9fjrh6L8BJ?usp=drive_link" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-white text-slate-900 font-medium rounded-lg hover:bg-slate-50 transition-colors border border-slate-300 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700 dark:border-slate-700">
                 Download CV
               </a>
             </div>
