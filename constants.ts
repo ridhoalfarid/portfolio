@@ -39,7 +39,7 @@ export const SKILLS: Skill[] = [
   },
   {
     category: "Tools",
-    items: ["R", "Python", "MySQL", "SPSS", "MINITAB", "Tableau", "Looker Studio", "PowerBI", "QGIS", "Microsoft Office"],
+    items: ["R", "Python", "PostgreSQL", "MySQL", "SPSS", "MINITAB", "Tableau", "Looker Studio", "PowerBI", "QGIS", "Microsoft Office", "Apache Airflow", "Docker"],
     icon: "fa-solid fa-tools"
   },
   {
@@ -52,6 +52,19 @@ export const SKILLS: Skill[] = [
 export const EXPERIENCES: Experience[] = [
   {
     id: 1,
+    role: "Data Scientist Intern",
+    company: "PT Suri Nusantara Jaya",
+    period: "Aug 2026 - Present",
+    location: "South Jakarta",
+    imageUrl: "/foto/DS Intern SNJ.jpeg",
+    description: [
+      "Set up an automated data pipeline using Docker, PostgreSQL, and Airflow to ingest transactional sales data via APIs.",
+      "Developed an interactive market intelligence dashboard integrating competitor pricing with external factors (weather, news, and public holidays) to monitor daily market trends.",
+      "Mapped 1,500+ quick-commerce products using Sentence Transformers and LLM verification to enable daily price benchmarking against key competitors."
+    ]
+  },
+  {
+    id: 2,
     role: "Business Analyst Intern",
     company: "PT Telkom Indonesia",
     period: "Oct 2025 - Jan 2026",
@@ -65,7 +78,7 @@ export const EXPERIENCES: Experience[] = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     role: "Teaching Assistant",
     company: "Universitas Islam Indonesia",
     period: "Mar 2024 - Aug 2025",
@@ -80,7 +93,7 @@ export const EXPERIENCES: Experience[] = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     role: "Statistician Intern",
     company: "Badan Pusat Statistik",
     period: "Jan 2025 - Feb 2025",
@@ -93,7 +106,7 @@ export const EXPERIENCES: Experience[] = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     role: "Research and Administration",
     company: "PKM Corner UII",
     period: "Dec 2023 - Dec 2024",
