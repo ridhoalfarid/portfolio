@@ -56,7 +56,7 @@ export const EXPERIENCES: Experience[] = [
     company: "PT Suri Nusantara Jaya",
     period: "Aug 2026 - Present",
     location: "South Jakarta",
-    imageUrl: "/foto/DS Intern SNJ.jpeg",
+    imageUrl: "/foto/ds-intern-snj.jpg",
     description: [
       "Set up an automated data pipeline using Docker, PostgreSQL, and Airflow to ingest transactional sales data via APIs.",
       "Developed an interactive market intelligence dashboard integrating competitor pricing with external factors (weather, news, and public holidays) to monitor daily market trends.",
@@ -69,7 +69,7 @@ export const EXPERIENCES: Experience[] = [
     company: "PT Telkom Indonesia",
     period: "Oct 2025 - Jan 2026",
     location: "Yogyakarta",
-    imageUrl: "/foto/Intern Telkom YK.jpg",
+    imageUrl: "/foto/intern-telkom-yk.jpg",
     description: [
       "Collected, managed, and validated performance and risk data to ensure accuracy and reliability.",
       "Analyzed churn data and regional performance metrics in Region 3 to identify patterns, risk factors, and actionable insights.",
@@ -83,7 +83,7 @@ export const EXPERIENCES: Experience[] = [
     company: "Universitas Islam Indonesia",
     period: "Mar 2024 - Aug 2025",
     location: "Sleman",
-    imageUrl: "/foto/Practicum Assistant.jpg",
+    imageUrl: "/foto/practicum-assistant.jpg",
     description: [
       "Statistical Computing (Mar 2025 – Aug 2025).",
       "Programming Algorithms (Sep 2024 – Jan 2025).",
@@ -98,7 +98,7 @@ export const EXPERIENCES: Experience[] = [
     company: "Badan Pusat Statistik",
     period: "Jan 2025 - Feb 2025",
     location: "East Jakarta",
-    imageUrl: "/foto/Statistician Intern.jpg",
+    imageUrl: "/foto/statistician-intern.jpg",
     description: [
       "Performed accurate data entry and verification to support the regional publication process.",
       "Conducted exploratory data analysis on public transportation datasets in Jakarta to analyze passenger volume and seasonal fluctuations.",
@@ -111,7 +111,7 @@ export const EXPERIENCES: Experience[] = [
     company: "PKM Corner UII",
     period: "Dec 2023 - Dec 2024",
     location: "Sleman",
-    imageUrl: "/foto/Research and Administration.jpg",
+    imageUrl: "/foto/research-and-administration.jpg",
     description: [
       "Managed PKM administrative tasks and monitored proposal submissions across faculties.",
       "Built and maintained databases to track performance indicators.",
@@ -127,7 +127,7 @@ export const PROJECTS: Project[] = [
   //  description: "This project developed a website for predicting air quality, utilizing the Air Pollution Standard Index (ISPU) from DKI Jakarta (January 1, 2021 – July 31, 2024). It applied KNN and SVM algorithms, achieving accuracies of 96% and 97%, respectively. The best-performing model is deployed to help the public understand air quality and take appropriate precautions for outdoor activities.",
     techStack: ["Python", "Classification", "Machine Learning"],
     category: "Machine Learning",
-    imageUrl: "/foto/AirWise.png",
+    imageUrl: "/foto/airwise.jpg",
     link: "https://airwise.streamlit.app/"
   },
   {
@@ -136,7 +136,7 @@ export const PROJECTS: Project[] = [
   //  description: "This project involved the creation of a database for Harmony Heaven Hotel, covering the process from database design to executing queries for various simulations within the company's system. The database was designed to manage data related to reservations, visitors, employees, rooms, and transactions, and it supported efficient decision-making through structured queries.",
     techStack: ["MySQL", "Database Design", "SQL"],
     category: "Database",
-    imageUrl: "/foto/Harmony Heaven Hotel Database.png",
+    imageUrl: "/foto/harmony-heaven-hotel-database.jpg",
     link: "https://drive.google.com/file/d/1mEcVxMlhctd8zRqvzc8upZcIUPrxz_7m/view"
   },
   {
@@ -145,7 +145,7 @@ export const PROJECTS: Project[] = [
   //  description: "This project analyzed the effect of a global boycott on McDonald's stock price through time series forecasting using LSTM and GRU models. The models were trained on historical stock data from January 31, 2015 to January 31, 2025, and optimized using Optuna. The untuned LSTM model achieved the lowest error rate, highlighting its effectiveness in capturing market sentiment changes during social movements.",
     techStack: ["Python", "Forecasting", "Deep Learning"],
     category: "Data Science",
-    imageUrl: "/foto/Perbandingan Kinerja LSTM dan GRU.png",
+    imageUrl: "/foto/perbandingan-kinerja-lstm-dan-gru.jpg",
     link: "https://drive.google.com/file/d/1Hu2-H4EKpdiJj6YH_xjDOWjhPa3vN3n0/view?usp=sharing"
   },
   {
@@ -154,7 +154,7 @@ export const PROJECTS: Project[] = [
   //  description: "This project developed an interactive website using Shiny to classify heart diseases. The application utilized the Random Forest algorithm and achieved 90% accuracy. The Shiny app is designed to be user-friendly, enabling users to make predictions easily and quickly.",
     techStack: ["R", "Classification", "Machine Learning"],
     category: "Machine Learning",
-    imageUrl: "/foto/ShinyApp Heart Disease Predictions.png",
+    imageUrl: "/foto/shinyapp-heart-disease-predictions.jpg",
     link: "https://mr-alfa.shinyapps.io/Heart-Disease-Predictions/"
   },
   {
@@ -163,7 +163,7 @@ export const PROJECTS: Project[] = [
   //  description: "This project analyzed public opinion on PPATK's policy of freezing dormant bank accounts using topic modeling (BERTopic) on YouTube comments. It leveraged IndoSBERT embeddings, UMAP, HDBSCAN, and KeyBERTInspired to uncover dominant themes and provide data-driven insights into public perspectives on financial regulations.",
     techStack: ["Python", "NLP", "Topic Modeling"],
     category: "Natural Language Processing",
-    imageUrl: "/foto/Pemodelan Topik.png",
+    imageUrl: "/foto/pemodelan-topik.jpg",
     link: "https://medium.com/@ridhoalfarid95/pemodelan-topik-terkait-pemblokiran-rekening-oleh-ppatk-menggunakan-bertopic-a36b1c3d624c"
   },
   {
@@ -172,7 +172,7 @@ export const PROJECTS: Project[] = [
   //  description: "This project aimed to analyze public sentiment towards the Tapera policy using data from social media platform X (Twitter). It used IndoBERTweet as a pre-trained model for fine-tuning, utilizing 4,112 tweets.",
     techStack: ["Python", "NLP", "Sentiment Analysis"],
     category: "Natural Language Processing",
-    imageUrl: "/foto/Sentiment Analysis of Tapera Policy Using IndoBERTweet.png",
+    imageUrl: "/foto/sentiment-analysis-of-tapera-policy-using-indobertweet.jpg",
     link: "https://medium.com/statistics-uii/sentiment-analysis-of-tapera-policy-using-indobertweet-43c332701efe"
   },
   {
@@ -181,7 +181,7 @@ export const PROJECTS: Project[] = [
   //  description: "This project identified three primary fashion categories: upper wear, lower wear, and footwear. Leveraging deep learning, it compared the performance of Artificial Neural Networks (ANN) and Convolutional Neural Networks (CNN) to improve the efficiency, accuracy, and personalization of automated apparel recognition systems.",
     techStack: ["Python", "Image Classification", "Deep Learning"],
     category: "Computer Vision",
-    imageUrl: "/foto/Perbandingan Kinerja ANN dan CNN.png",
+    imageUrl: "/foto/perbandingan-kinerja-ann-dan-cnn.jpg",
     link: "https://medium.com/@ridhoalfarid95/perbandingan-kinerja-artificial-neural-network-dan-convolutional-neural-network-dalam-klasifikasi-2ce891529155"
   },
   {
@@ -190,7 +190,7 @@ export const PROJECTS: Project[] = [
   //  description: "This project developed a real-time face recognition system using OpenCV and LBPH model to identify individuals from a live video stream.",
     techStack: ["Python", "OpenCV", "Computer Vision"],
     category: "Computer Vision",
-    imageUrl: "/foto/face_recognition.png",
+    imageUrl: "/foto/face-recognition.jpg",
     link: "https://github.com/ridhoalfarid/Face-Recognition"
   },
   {
@@ -199,7 +199,7 @@ export const PROJECTS: Project[] = [
   //  description: "This project presented an infographic that compared the educational quality of Indonesia, Malaysia, and Singapore using the 2022 PISA results as a primary benchmark. It highlighted Singapore's top ranking and examined contributing factors such as student-teacher ratios and school participation rates. Ultimately, it proposed the 'CERDAS' framework as a multi-faceted strategy to enhance Indonesia's educational standards.",
     techStack: ["Tableau", "Data Visualization", "Infographic"],
     category: "Data Visualization",
-    imageUrl: "/foto/CERDAS.jpg",
+    imageUrl: "/foto/cerdas.jpg",
     link: "https://drive.google.com/file/d/177mLbe6rL_b892qps6fcpYArs5oMnXNZ/view"
   },
   {
@@ -208,7 +208,7 @@ export const PROJECTS: Project[] = [
   //  description: "This project presented an infographic that compared the educational quality of Indonesia, Malaysia, and Singapore using the 2022 PISA results as a primary benchmark. It highlighted Singapore's top ranking and examined contributing factors such as student-teacher ratios and school participation rates. Ultimately, it proposed the 'CERDAS' framework as a multi-faceted strategy to enhance Indonesia's educational standards.",
     techStack: ["Python", "Background Subtraction", "Computer Vision"],
     category: "Computer Vision",
-    imageUrl: "/foto/automated_gate.png",
+    imageUrl: "/foto/automated-gate.jpg",
     link: "https://github.com/ridhoalfarid/Automated-Toll-Gate-Traffic-Monitoring"
   },
   {
@@ -217,7 +217,7 @@ export const PROJECTS: Project[] = [
   //  description: "This project presented an infographic that compared the educational quality of Indonesia, Malaysia, and Singapore using the 2022 PISA results as a primary benchmark. It highlighted Singapore's top ranking and examined contributing factors such as student-teacher ratios and school participation rates. Ultimately, it proposed the 'CERDAS' framework as a multi-faceted strategy to enhance Indonesia's educational standards.",
     techStack: ["Python", "Clustering", "Machine Learning"],
     category: "Data Science",
-    imageUrl: "/foto/Pengelompokan Tingkat Pengangguran Terbuka.png",
+    imageUrl: "/foto/pengelompokan-tingkat-pengangguran-terbuka.jpg",
     link: "https://drive.google.com/file/d/1-IPOQ-fIwmPvEkSagKNpBev07EupOBrY/view"
   },
   {
@@ -226,7 +226,7 @@ export const PROJECTS: Project[] = [
   //  description: "This project presented an infographic that compared the educational quality of Indonesia, Malaysia, and Singapore using the 2022 PISA results as a primary benchmark. It highlighted Singapore's top ranking and examined contributing factors such as student-teacher ratios and school participation rates. Ultimately, it proposed the 'CERDAS' framework as a multi-faceted strategy to enhance Indonesia's educational standards.",
     techStack: ["Python", "BigQuery", "Data Visualization"],
     category: "Data Science",
-    imageUrl: "/foto/Fore Coffee Sales Performance Analysis.png",
+    imageUrl: "/foto/fore-coffee-sales-performance-analysis.jpg",
     link: "https://drive.google.com/file/d/11YL63ZJbrEz9gssiPPGl4uqMeHjD9Mxx/view"
   }
 ];
@@ -239,7 +239,7 @@ export const ORGANIZATIONS_VOLUNTEERS: OrganizationVolunteer[] = [
     period: "Nov 2024 – Oct 2025",
     location: "Sleman",
     type: "organization",
-    imageUrl: "/foto/GDG UII.jpg",
+    imageUrl: "/foto/gdg-uii.jpg",
     description: [
       "Designed comprehensive learning pathways for all community members.",
       "Delivered hands-on sessions on Data Science and Machine Learning concepts.",
@@ -253,7 +253,7 @@ export const ORGANIZATIONS_VOLUNTEERS: OrganizationVolunteer[] = [
     period: "Jul 2023 – Jan 2024",
     location: "Sleman",
     type: "volunteer",
-    imageUrl: "/foto/Enthusiastic Competition 2023.jpg",
+    imageUrl: "/foto/enthusiastic-competition-2023.jpg",
     description: [
       "Provided, prepared, and managed all required facilities during the event.",
       "Collaborated with other divisions to fulfill equipment and facility needs.",
@@ -267,7 +267,7 @@ export const ORGANIZATIONS_VOLUNTEERS: OrganizationVolunteer[] = [
     period: "Jul 2023 – Sep 2023",
     location: "Sleman",
     type: "volunteer",
-    imageUrl: "/foto/Masa Ta'aruf FMIPA 2023.jpg",
+    imageUrl: "/foto/masa-taaruf-fmipa-2023.jpg",
     description: [
       "Provided, maintained, and returned all required facilities during the event.",
       "Coordinated with other divisions to ensure operational readiness.",
@@ -281,7 +281,7 @@ export const ORGANIZATIONS_VOLUNTEERS: OrganizationVolunteer[] = [
     period: "Oct 2022 – Dec 2022",
     location: "Sleman",
     type: "volunteer",
-    imageUrl: "/foto/I-Birthy 2022.jpg",
+    imageUrl: "/foto/i-birthy-2022.jpg",
     description: [
       "Facilitated seamless coordination between event staff, sponsors, guests, and participants to ensure effective communication.",
       "Managed transportation and logistics to support timely mobilization for event activities."
