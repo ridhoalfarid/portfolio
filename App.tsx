@@ -182,11 +182,15 @@ const Hero = () => {
 
         <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
           <div className="relative">
-            <div className="absolute inset-0 rounded-full bg-primary/20 blur-3xl dark:bg-primary/30"></div>
+            <div className="absolute inset-0 rounded-full bg-primary/20 blur-3xl pointer-events-none -z-0 dark:bg-primary/30"></div>
             <img
               src="/foto/profile.jpg"
               alt={PROFILE.name}
-              className="relative h-64 w-64 rounded-full border-4 border-white object-cover shadow-2xl shadow-emerald-500/20 dark:border-slate-700 dark:shadow-emerald-400/20 sm:h-80 sm:w-80 lg:h-96 lg:w-96"
+              width="384"
+              height="384"
+              fetchPriority="high"
+              decoding="async"
+              className="relative z-10 h-64 w-64 rounded-full border-4 border-white object-cover shadow-2xl shadow-emerald-500/20 dark:border-slate-700 dark:shadow-emerald-400/20 sm:h-80 sm:w-80 lg:h-96 lg:w-96"
             />
           </div>
         </div>
@@ -284,6 +288,10 @@ const Experience = () => {
                       <img
                         src={exp.imageUrl}
                         alt={exp.company}
+                        width="400"
+                        height="192"
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-48 object-cover"
                       />
                     </div>
@@ -362,6 +370,10 @@ const Projects = () => {
                 <img
                   src={project.imageUrl}
                   alt={project.title}
+                  width="400"
+                  height="192"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-4 right-4 z-20">
@@ -448,6 +460,11 @@ const OrganizationsVolunteers = () => {
                       <div className="mb-4 rounded-lg overflow-hidden">
                         <img
                           src={org.imageUrl}
+                          alt={org.organization}
+                          width="400"
+                          height="192"
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-48 object-cover"
                         />
                       </div>
