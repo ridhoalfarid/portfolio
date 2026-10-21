@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ReactNode } from 'react';
+import React, { useState, useEffect, useMemo, ReactNode } from 'react';
 import { PROFILE, EXPERIENCES, PROJECTS, SKILLS, SOCIAL_LINKS, ORGANIZATIONS_VOLUNTEERS, CERTIFICATIONS } from './constants';
 import { Project, Skill } from './types';
 
@@ -39,8 +39,20 @@ const Navbar = ({ isDarkMode, onToggleTheme }: { isDarkMode: boolean; onToggleTh
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled((prev) => {
+            const next = window.scrollY > 50;
+            return prev !== next ? next : prev;
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -322,24 +334,27 @@ const Experience = () => {
   );
 };
 
+const PROJECT_CATEGORIES = [
+  'All',
+  'Data Science',
+  'Database',
+  'Data Visualization',
+  'Machine Learning',
+  'Natural Language Processing',
+  'Computer Vision'
+] as const;
+
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('All');
-  const categories = [
-    'All',
-    'Data Science',
-    'Database',
-    'Data Visualization',
-    'Machine Learning',
-    'Natural Language Processing',
-    'Computer Vision'
-  ];
 
-  const filteredProjects = activeCategory === 'All'
-    ? PROJECTS
-    : PROJECTS.filter(p => p.category === activeCategory);
+  const filteredProjects = useMemo(() => {
+    return activeCategory === 'All'
+      ? PROJECTS
+      : PROJECTS.filter((p) => p.category === activeCategory);
+  }, [activeCategory]);
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-slate-900 dark:bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]">
+    <section id="projects" className="py-20 bg-white dark:bg-slate-900 dark:dark-stardust-pattern">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle>
           Projects
@@ -347,7 +362,7 @@ const Projects = () => {
 
         {/* Filter */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {categories.map(cat => (
+          {PROJECT_CATEGORIES.map(cat => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
@@ -496,7 +511,7 @@ const OrganizationsVolunteers = () => {
 
 const Certifications = () => {
   return (
-    <section id="certifications" className="py-20 bg-white dark:bg-slate-900 dark:bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]">
+    <section id="certifications" className="py-20 bg-white dark:bg-slate-900 dark:dark-stardust-pattern">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle>
           Certifications
@@ -604,7 +619,14 @@ const Footer = () => {
           </p>
           <div className="flex space-x-6">
             {SOCIAL_LINKS.map((link, i) => (
-              <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-200 hover:text-primary transition-colors text-xl">
+              <a
+                key={i}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Visit Muhammad Ridho Alfarid on ${link.platform}`}
+                className="text-slate-600 dark:text-slate-200 hover:text-primary transition-colors text-xl"
+              >
                 <i className={link.icon}></i>
               </a>
             ))}
