@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ReactNode } from 'react';
+import React, { useState, useEffect, useMemo, ReactNode } from 'react';
 import { PROFILE, EXPERIENCES, PROJECTS, SKILLS, SOCIAL_LINKS, ORGANIZATIONS_VOLUNTEERS, CERTIFICATIONS } from './constants';
 import { Project, Skill } from './types';
 
@@ -39,8 +39,20 @@ const Navbar = ({ isDarkMode, onToggleTheme }: { isDarkMode: boolean; onToggleTh
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled((prev) => {
+            const next = window.scrollY > 50;
+            return prev !== next ? next : prev;
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -182,11 +194,15 @@ const Hero = () => {
 
         <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
           <div className="relative">
-            <div className="absolute inset-0 rounded-full bg-primary/20 blur-3xl dark:bg-primary/30"></div>
+            <div className="absolute inset-0 rounded-full bg-primary/20 blur-3xl pointer-events-none -z-0 dark:bg-primary/30"></div>
             <img
               src="/foto/profile.jpg"
               alt={PROFILE.name}
-              className="relative h-64 w-64 rounded-full border-4 border-white object-cover shadow-2xl shadow-emerald-500/20 dark:border-slate-700 dark:shadow-emerald-400/20 sm:h-80 sm:w-80 lg:h-96 lg:w-96"
+              width="384"
+              height="384"
+              fetchPriority="high"
+              decoding="async"
+              className="relative z-10 h-64 w-64 rounded-full border-4 border-white object-cover shadow-2xl shadow-emerald-500/20 dark:border-slate-700 dark:shadow-emerald-400/20 sm:h-80 sm:w-80 lg:h-96 lg:w-96"
             />
           </div>
         </div>
@@ -284,6 +300,10 @@ const Experience = () => {
                       <img
                         src={exp.imageUrl}
                         alt={exp.company}
+                        width="400"
+                        height="192"
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-48 object-cover"
                       />
                     </div>
@@ -314,24 +334,27 @@ const Experience = () => {
   );
 };
 
+const PROJECT_CATEGORIES = [
+  'All',
+  'Data Science',
+  'Database',
+  'Data Visualization',
+  'Machine Learning',
+  'Natural Language Processing',
+  'Computer Vision'
+] as const;
+
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('All');
-  const categories = [
-    'All',
-    'Data Science',
-    'Database',
-    'Data Visualization',
-    'Machine Learning',
-    'Natural Language Processing',
-    'Computer Vision'
-  ];
 
-  const filteredProjects = activeCategory === 'All'
-    ? PROJECTS
-    : PROJECTS.filter(p => p.category === activeCategory);
+  const filteredProjects = useMemo(() => {
+    return activeCategory === 'All'
+      ? PROJECTS
+      : PROJECTS.filter((p) => p.category === activeCategory);
+  }, [activeCategory]);
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-slate-900 dark:bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]">
+    <section id="projects" className="py-20 bg-white dark:bg-slate-900 dark:dark-stardust-pattern">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle>
           Projects
@@ -339,7 +362,7 @@ const Projects = () => {
 
         {/* Filter */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {categories.map(cat => (
+          {PROJECT_CATEGORIES.map(cat => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
@@ -362,6 +385,10 @@ const Projects = () => {
                 <img
                   src={project.imageUrl}
                   alt={project.title}
+                  width="400"
+                  height="192"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-4 right-4 z-20">
@@ -448,6 +475,11 @@ const OrganizationsVolunteers = () => {
                       <div className="mb-4 rounded-lg overflow-hidden">
                         <img
                           src={org.imageUrl}
+                          alt={org.organization}
+                          width="400"
+                          height="192"
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-48 object-cover"
                         />
                       </div>
@@ -479,7 +511,7 @@ const OrganizationsVolunteers = () => {
 
 const Certifications = () => {
   return (
-    <section id="certifications" className="py-20 bg-white dark:bg-slate-900 dark:bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]">
+    <section id="certifications" className="py-20 bg-white dark:bg-slate-900 dark:dark-stardust-pattern">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle>
           Certifications
@@ -587,7 +619,14 @@ const Footer = () => {
           </p>
           <div className="flex space-x-6">
             {SOCIAL_LINKS.map((link, i) => (
-              <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-200 hover:text-primary transition-colors text-xl">
+              <a
+                key={i}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Visit Muhammad Ridho Alfarid on ${link.platform}`}
+                className="text-slate-600 dark:text-slate-200 hover:text-primary transition-colors text-xl"
+              >
                 <i className={link.icon}></i>
               </a>
             ))}
